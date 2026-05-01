@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="bg-black text-white font-sans overflow-x-hidden min-h-screen">
       
-      {/* 1. NAV - MANTENIENDO EL BRANDING */}
+      {/* 1. NAV - ARREGLADO CON Z-INDEX Y POSICIONAMIENTO CORRECTO */}
       <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-[100] flex justify-between items-center px-6 py-4 border-b border-white/10">
         <h1 className="text-yellow-500 font-bold text-2xl tracking-tighter">FungiPlus</h1>
         <a href="https://wa.me/573177013631" target="_blank" rel="noopener noreferrer">
@@ -27,8 +27,8 @@ function App() {
         </a>
       </nav>
 
-      {/* 2. HERO SECTION - IMPACTO VISUAL */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative">
+      {/* 2. HERO SECTION - ARREGLADO EL PT-28 PARA QUE NO SE TAPE EL TEXTO SUPERIOR */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative pt-28">
         <div className="absolute w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-yellow-500 opacity-10 blur-[150px] rounded-full z-0"></div>
         
         <div className="fade-in mb-6 text-sm text-yellow-500 tracking-[0.4em] font-bold z-10">
@@ -41,7 +41,7 @@ function App() {
 
         <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12 fade-in z-10 leading-relaxed font-light">
           Enfócate más. Rinde mejor. <br className="hidden md:block" />
-          <span className="text-white">Sin ansiedad. Sin bajones.</span>
+          <span className="text-white font-medium">Sin ansiedad. Sin bajones.</span>
         </p>
 
         <div className="relative z-10 mb-16 fade-in">
@@ -90,69 +90,66 @@ function App() {
         </div>
       </section>
 
-      {/* 4. LIFESTYLE - ENFOQUE MINIMALISTA CON ICONOS RECUPERADOS */}
-<section className="py-32 px-6 bg-zinc-950/50 relative">
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-    
-    <div className="relative z-10 order-2 md:order-1 fade-in">
-      <span className="text-yellow-500 font-bold tracking-[0.4em] text-xs uppercase mb-6 block text-left">
-        Evolución en cada sorbo
-      </span>
-      <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tighter text-left">
-        Evolución en <br />
-        <span className="text-yellow-400 italic">cada sorbo.</span>
-      </h2>
-      <p className="text-gray-400 text-xl md:text-2xl mb-10 leading-relaxed text-left font-light">
-        El café convencional es cosa del pasado. Bienvenido a la era del <span className="text-white font-medium">café funcional</span>: energía limpia, mente clara y una resistencia mental inquebrantable.
-      </p>
-
-      {/* Checklist con los "likes" (iconos) recuperados y el texto nuevo */}
-      <div className="space-y-6 mb-14">
-        {[
-          "La sinergia perfecta de adaptógenos premium.",
-          "Claridad mental instantánea y duradera.",
-          "Origen ético y pureza certificada."
-        ].map((item, idx) => (
-          <div key={idx} className="flex items-center group cursor-default">
-            <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500 mr-4 group-hover:bg-yellow-500 group-hover:text-black transition-all duration-300">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <span className="text-lg text-gray-300 font-medium group-hover:text-white transition-colors">
-              {item}
+      {/* 4. LIFESTYLE */}
+      <section className="py-32 px-6 bg-zinc-950/50 relative">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+          <div className="relative z-10 order-2 md:order-1 fade-in">
+            <span className="text-yellow-500 font-bold tracking-[0.4em] text-xs uppercase mb-6 block text-left">
+              Evolución en cada sorbo
             </span>
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tighter text-left">
+              Evolución en <br />
+              <span className="text-yellow-400 italic">cada sorbo.</span>
+            </h2>
+            <p className="text-gray-400 text-xl md:text-2xl mb-10 leading-relaxed text-left font-light">
+              El café convencional es cosa del pasado. Bienvenido a la era del <span className="text-white font-medium">café funcional</span>: energía limpia, mente clara y una resistencia mental inquebrantable.
+            </p>
+
+            <div className="space-y-6 mb-14">
+              {[
+                "La sinergia perfecta de adaptógenos premium.",
+                "Claridad mental instantánea y duradera.",
+                "Origen ético y pureza certificada."
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center group cursor-default">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500 mr-4 group-hover:bg-yellow-500 group-hover:text-black transition-all duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-lg text-gray-300 font-medium group-hover:text-white transition-colors">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-8 bg-zinc-900 border-l-8 border-green-500 rounded-2xl shadow-2xl">
+              <p className="text-white font-bold text-xl mb-2 text-left tracking-tight">Garantía Real de 30 Días</p>
+              <p className="text-gray-400 text-left leading-snug font-light italic">
+                "Si no experimentas una evolución real en tu bienestar y enfoque, te devolvemos tu inversión sin preguntas."
+              </p>
+            </div>
           </div>
-        ))}
-      </div>
 
-      <div className="p-8 bg-zinc-900 border-l-8 border-green-500 rounded-2xl shadow-2xl">
-        <p className="text-white font-bold text-xl mb-2 text-left tracking-tight">Garantía Real de 30 Días</p>
-        <p className="text-gray-400 text-left leading-snug font-light italic">
-          "Si no experimentas una evolución real en tu bienestar y enfoque, te devolvemos tu inversión sin preguntas."
-        </p>
-      </div>
-    </div>
-
-    <div className="relative order-1 md:order-2 group fade-in">
-      <div className="absolute -inset-10 bg-yellow-500/5 blur-[100px] rounded-full"></div>
-      <div className="relative overflow-hidden rounded-[3rem] border border-white/5 shadow-2xl">
-        <img 
-          src="/imagenes/fungiplus2.jpeg" 
-          alt="Evolución FungiPlus" 
-          className="w-full object-cover transform group-hover:scale-105 transition-transform duration-[3s] ease-out" 
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
-        <div className="absolute bottom-10 left-10 text-left">
-          <p className="text-white font-light text-3xl tracking-widest uppercase opacity-80">
-            Pureza <span className="font-black italic text-yellow-400">Superior</span>
-          </p>
+          <div className="relative order-1 md:order-2 group fade-in">
+            <div className="absolute -inset-10 bg-yellow-500/5 blur-[100px] rounded-full"></div>
+            <div className="relative overflow-hidden rounded-[3rem] border border-white/5 shadow-2xl">
+              <img 
+                src="/imagenes/fungiplus2.jpeg" 
+                alt="Evolución FungiPlus" 
+                className="w-full object-cover transform group-hover:scale-105 transition-transform duration-[3s] ease-out" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+              <div className="absolute bottom-10 left-10 text-left">
+                <p className="text-white font-light text-3xl tracking-widest uppercase opacity-80">
+                  Pureza <span className="font-black italic text-yellow-400">Superior</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* 5. TESTIMONIOS */}
       <section className="py-32 px-6 bg-black">
