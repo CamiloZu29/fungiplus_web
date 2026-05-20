@@ -27,68 +27,111 @@ function App() {
         </a>
       </nav>
 
-      {/* 2. HERO SECTION - ARREGLADO EL PT-28 PARA QUE NO SE TAPE EL TEXTO SUPERIOR */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative pt-28">
-        <div className="absolute w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-yellow-500 opacity-10 blur-[150px] rounded-full z-0"></div>
-        
-        <div className="fade-in mb-6 text-sm text-yellow-500 tracking-[0.4em] font-bold z-10">
-          PREMIUM FUNCTIONAL COFFEE
-        </div>
+{/* HERO - VERSIÓN TOP PREMIUM */}
+<section className="min-h-screen flex flex-col justify-between bg-zinc-950 relative overflow-hidden">
+  {/* Background Glows */}
+  <div className="absolute inset-0 bg-[radial-gradient(at_center,#eab30815_0%,transparent_50%)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(at_top_right,#eab30808_0%,transparent_70%)]"></div>
 
-        <h1 className="text-7xl md:text-9xl font-black text-white mb-6 fade-in z-10 tracking-tighter drop-shadow-2xl">
-          Fungi<span className="text-yellow-400">Plus</span>
-        </h1>
+  {/* Contenedor con mi-auto para centrar todo el bloque de texto e imagen verticalmente */}
+  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 py-12 lg:py-0 my-auto w-full">
+    
+    {/* Contenido Izquierdo */}
+    <div className="text-center lg:text-left order-2 lg:order-1">
+      <div className="inline-flex items-center gap-3 bg-zinc-900/90 backdrop-blur-md border border-yellow-500/40 px-7 py-3 rounded-3xl text-yellow-400 text-sm font-semibold mb-8">
+        🍄 PREMIUM FUNCTIONAL COFFEE
+      </div>
 
-        <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12 fade-in z-10 leading-relaxed font-light">
-          Enfócate más. Rinde mejor. <br className="hidden md:block" />
-          <span className="text-white font-medium">Sin ansiedad. Sin bajones.</span>
-        </p>
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.05] text-white mb-6">
+        Energía real<br />
+        <span className="text-yellow-400">sin ansiedad ni bajones</span>
+      </h1>
 
-        <div className="relative z-10 mb-16 fade-in">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-80 h-80 bg-yellow-400 opacity-20 blur-[110px] rounded-full"></div>
-          </div>
-          <img 
-            src="/imagenes/Fungiplus.jpg"
-            alt="FungiPlus Café"
-            className="w-80 md:w-[500px] object-contain floating relative z-10 drop-shadow-[0_40px_80px_rgba(255,215,0,0.45)]"
-          />
-        </div>
+      <p className="text-xl md:text-2xl text-gray-400 max-w-lg mx-auto lg:mx-0 mb-10">
+        Café premium instantáneo con <span className="text-white font-medium">Melena De León y Ganoderma</span>. 
+        Enfoque profundo, energía sostenida y mejor ánimo durante todo el día.
+      </p>
 
-        <a href="https://wa.me/573177013631" target="_blank" className="z-10">
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-14 py-5 rounded-2xl text-xl font-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(255,215,0,0.5)] uppercase tracking-tight">
-            Lo quiero
+      <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start mb-12">
+        <a 
+          href="https://wa.me/573177013631?text=Hola! Quiero probar FungiPlus 🌱" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <button className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-2xl px-14 py-7 rounded-3xl transition-all duration-300 hover:scale-105 shadow-2xl shadow-yellow-500/40">
+            Quiero probarlo ahora
           </button>
         </a>
-      </section>
 
-      {/* 3. BENEFICIOS */}
-      <section className="py-32 px-6 bg-black relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-yellow-600/10 blur-[130px] rounded-full"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-24 fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Lo que <span className="text-yellow-400">FungiPlus</span> <br/> hace por ti
-            </h2>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
-          </div>
+        <a href="#packs" className="w-full sm:w-auto border-2 border-white/50 hover:border-white text-white font-semibold text-xl px-10 py-7 rounded-3xl transition-all duration-300">
+          Ver planes y precios
+        </a>
+      </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: "⚡", title: "Energía sostenida", desc: "Sin picos de ansiedad ni bajones repentinos." },
-              { icon: "🧠", title: "Enfoque total", desc: "Claridad mental constante para tus tareas más difíciles." },
-              { icon: "🛡️", title: "Inmunidad", desc: "Hongos adaptógenos que refuerzan tus defensas naturales." },
-              { icon: "🌿", title: "100% Natural", desc: "Pureza absoluta: sin químicos, sin azúcar, sin rellenos." }
-            ].map((b, i) => (
-              <div key={i} className="fade-in group p-10 rounded-[2.5rem] bg-zinc-900/30 border border-white/10 hover:border-yellow-500/40 transition-all duration-500 backdrop-blur-sm">
-                <div className="text-5xl mb-6 group-hover:scale-125 transition-transform duration-500">{b.icon}</div>
-                <h3 className="text-2xl font-bold text-yellow-400 mb-4">{b.title}</h3>
-                <p className="text-gray-400 leading-relaxed text-base">{b.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* Trust */}
+      <div className="flex flex-wrap justify-center lg:justify-start gap-x-10 gap-y-4 text-sm text-gray-400">
+        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Envío gratis desde 2 unidades</div>
+        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Pago contra entrega</div>
+        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> +2.500 clientes satisfechos</div>
+      </div>
+    </div>
+
+    {/* Imagen Derecha */}
+    <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+      <div className="relative">
+        <img 
+          src="/public/imagenes/Fungiplus.jpg" 
+          alt="Café FungiPlus con hongos adaptógenos" 
+          className="w-full max-w-[520px] lg:max-w-[560px] drop-shadow-2xl rounded-3xl"
+        />
+        {/* Glow premium alrededor de la imagen */}
+        <div className="absolute -inset-10 bg-yellow-400/10 blur-3xl -z-10 rounded-[4rem]"></div>
+      </div>
+    </div>
+  </div>
+
+  {/* Scroll Indicator Premium Corregido */}
+  {/* Cambiado a relative y mt-auto mb-8 para que fluyas debajo del contenido sin pisarlo */}
+  <div className="relative mt-auto mb-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center z-20">
+    <p className="text-yellow-400/70 text-xs tracking-[4px] mb-3">DESLIZA PARA DESCUBRIR</p>
+    <div className="relative">
+      <div className="w-px h-14 bg-gradient-to-b from-transparent via-yellow-400 to-transparent"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full shadow-[0_0_20px_#facc15] animate-ping"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full"></div>
+    </div>
+  </div>
+</section>
+
+
+
+ {/* 3. BENEFICIOS */}
+<section className="py-32 px-6 bg-black relative overflow-hidden">
+  <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-yellow-600/10 blur-[130px] rounded-full"></div>
+  <div className="max-w-7xl mx-auto relative z-10">
+    <div className="text-center mb-24 fade-in">
+      <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+        Lo que <span className="text-yellow-400">FungiPlus</span> <br/> hace por ti
+      </h2>
+      <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { icon: "⚡", title: "Energía sostenida", desc: "Sin picos de ansiedad ni bajones repentinos." },
+        { icon: "🧠", title: "Enfoque total", desc: "Claridad mental constante para tus tareas más difíciles." },
+        { icon: "🛡️", title: "Inmunidad", desc: "Hongos adaptógenos que refuerzan tus defensas naturales." },
+        { icon: "🌿", title: "100% Natural", desc: "Pureza absoluta: sin químicos, sin azúcar, sin rellenos." }
+      ].map((b, i) => (
+        <div key={i} className="fade-in group p-10 rounded-[2.5rem] bg-zinc-900/30 border border-white/10 hover:border-yellow-500/40 transition-all duration-500 backdrop-blur-sm">
+          <div className="text-5xl mb-6 group-hover:scale-125 transition-transform duration-500">{b.icon}</div>
+          <h3 className="text-2xl font-bold text-yellow-400 mb-4">{b.title}</h3>
+          {/* CAMBIO AQUÍ: de text-gray-400 a text-zinc-300 */}
+          <p className="text-zinc-300 leading-relaxed text-base">{b.desc}</p> 
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* 4. LIFESTYLE */}
       <section className="py-32 px-6 bg-zinc-950/50 relative">
@@ -151,72 +194,190 @@ function App() {
         </div>
       </section>
 
-      {/* 5. TESTIMONIOS */}
-      <section className="py-32 px-6 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20 fade-in">
-            <h3 className="text-green-500 font-black tracking-[0.3em] text-sm mb-6 uppercase italic">Social Proof</h3>
-            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">Ellos ya son <span className="text-yellow-400 italic">Plus</span></h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { n: "Valentina M.", j: "Diseñadora freelance", t: "Llevo 3 meses y la diferencia es increíble. Me concentro mejor y no tengo bajón de las 3pm.", i: "V", c: "bg-green-500/20 text-green-500" },
-              { n: "Andrés R.", j: "Emprendedor digital", t: "Era escéptico, pero después de la primera semana noté más claridad mental. Mi productividad se duplicó.", i: "A", c: "bg-blue-500/20 text-blue-400" },
-              { n: "Camila S.", j: "Nutricionista", t: "Valoro mucho los ingredientes naturales. Lo recomiendo a todos mis pacientes por su pureza y efectos.", i: "C", c: "bg-yellow-500/20 text-yellow-500" },
-              { n: "Jorge P.", j: "Atleta amateur", t: "Lo tomo antes de entrenar y el rendimiento es notable. Sabe mucho mejor que otros cafés funcionales.", i: "J", c: "bg-purple-500/20 text-purple-400" }
-            ].map((t, idx) => (
-              <div key={idx} className="fade-in bg-zinc-900/40 border border-white/5 p-10 rounded-[2.5rem] flex flex-col justify-between hover:bg-zinc-900/60 transition-all group border-b-2 hover:border-b-yellow-500">
-                <div>
-                  <div className="text-yellow-500 text-sm mb-6 flex">★★★★★</div>
-                  <p className="text-gray-300 text-base italic mb-8 leading-relaxed">"{t.t}"</p>
-                </div>
-                <div className="flex items-center">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black mr-4 border border-white/5 ${t.c}`}>{t.i}</div>
-                  <div className="text-left">
-                    <p className="text-white font-bold text-base">{t.n}</p>
-                    <p className="text-gray-500 text-xs uppercase tracking-widest">{t.j}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* 5. TESTIMONIOS */}
+<section className="py-32 px-6 bg-black relative overflow-hidden">
+  {/* Destello sutil de fondo para dar atmósfera */}
+  <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-green-900/10 blur-[150px] rounded-full pointer-events-none"></div>
 
-      {/* 6. PACKS DE VENTA */}
-      <section className="py-32 px-6 bg-zinc-950 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/5 blur-[120px] rounded-full"></div>
-        <h2 className="text-5xl md:text-7xl font-black text-white mb-20 text-center fade-in tracking-tighter italic">Elige tu Experiencia</h2>
-        <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto relative z-10">
-          {[
-            { title: "Plan Esencial", units: "1 Unidad", old: "$89.000", price: "$60.000", tag: "", color: "border-white/10" },
-            { title: "Plan Bienestar", units: "2 Unidades", old: "$178.000", price: "$120.000", tag: "El favorito de la comunidad", color: "border-yellow-500 shadow-[0_0_50px_rgba(234,179,8,0.2)] scale-105 z-20" },
-            { title: "Plan Vitalidad", units: "3 Unidades", old: "$267.000", price: "$180.000", tag: "Mejor inversión", color: "border-white/10" }
-          ].map((p, i) => (
-            <div key={i} className={`fade-in relative p-12 rounded-[3rem] bg-zinc-900/60 backdrop-blur-md border-2 ${p.color} flex flex-col items-center text-center transition-transform hover:scale-[1.07] duration-500`}>
-              {p.tag && <span className="absolute -top-5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-xl">{p.tag}</span>}
-              <h3 className="text-3xl font-black mb-2 text-white">{p.title}</h3>
-              <p className="text-gray-400 font-medium mb-8 italic">{p.units}</p>
-              <p className="text-gray-500 line-through text-lg mb-2 font-bold">{p.old}</p>
-              <p className="text-5xl font-black text-white mb-10 tracking-tighter">{p.price}</p>
-              <a href="https://wa.me/573177013631" className="w-full mt-auto">
-                <button className={`w-full py-5 rounded-2xl font-black text-lg transition-all uppercase tracking-widest ${p.tag ? 'bg-yellow-500 text-black hover:shadow-[0_0_30px_rgba(234,179,8,0.5)]' : 'bg-white/10 text-white hover:bg-white/20'}`}>
-                  Adquirir ahora
-                </button>
-              </a>
+  <div className="max-w-7xl mx-auto relative z-10">
+    <div className="text-center mb-20 fade-in">
+      <h3 className="text-green-500 font-black tracking-[0.3em] text-sm mb-6 uppercase italic">Social Proof</h3>
+      <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
+        Ellos ya son <span className="text-yellow-400 italic">Plus</span>
+      </h2>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { 
+          n: "Valentina M.", 
+          j: "Diseñadora Freelance", 
+          t: "Llevo 3 meses y la diferencia es increíble. Me concentro mejor y no tengo bajón de las 3pm.", 
+          img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" 
+        },
+        { 
+          n: "Andrés R.", 
+          j: "Emprendedor Digital", 
+          t: "Era escéptico, pero después de la primera semana noté más claridad mental. Mi productividad se duplicó.", 
+          img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" 
+        },
+        { 
+          n: "Camila S.", 
+          j: "Nutricionista / Reg. 4821", 
+          t: "Valoro mucho los ingredientes naturales. Lo recomiendo a todos mis pacientes por su pureza y efectos.", 
+          img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80" 
+        },
+        { 
+          n: "Jorge P.", 
+          j: "Atleta Amateur", 
+          t: "Lo tomo antes de entrenar y el rendimiento es notable. Sabe mucho mejor que otros cafés funcionales.", 
+          img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" 
+        }
+      ].map((t, idx) => (
+        <div key={idx} className="fade-in bg-zinc-900/30 border border-white/10 p-10 rounded-[2.5rem] flex flex-col justify-between hover:bg-zinc-900/60 transition-all duration-300 group border-b-2 border-transparent hover:border-b-yellow-500 backdrop-blur-sm shadow-xl">
+          <div>
+            {/* Estrellas más profesionales y estilizadas */}
+            <div className="text-yellow-400 text-sm mb-6 flex gap-1 tracking-wider drop-shadow-[0_2px_8px_rgba(234,179,8,0.3)]">
+              ★★★★★
             </div>
-          ))}
-        </div>
-        
-        <div className="mt-20 text-center fade-in">
-          <div className="inline-block px-8 py-3 bg-red-600/10 border border-red-600/30 rounded-2xl mb-6">
-            <p className="text-red-500 font-black animate-pulse tracking-[0.2em] uppercase text-sm">⚠️ Pocas unidades disponibles con precio especial</p>
+            {/* Texto con mejor contraste (zinc-200) */}
+            <p className="text-zinc-200 text-base italic mb-8 leading-relaxed font-medium">
+              "{t.t}"
+            </p>
           </div>
-          <p className="text-gray-400 text-lg flex items-center justify-center">
-            <span className="mr-2">🚚</span> Pago contra entrega en toda Colombia
-          </p>
+          
+          <div className="flex items-center pt-4 border-t border-white/5">
+            {/* Imagen Real del Cliente */}
+            <img 
+              src={t.img} 
+              alt={t.n} 
+              className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white/10 group-hover:border-yellow-500/50 transition-colors duration-300"
+            />
+            <div className="text-left">
+              <p className="text-white font-bold text-base tracking-wide">{t.n}</p>
+              {/* Cargo con gris más claro (zinc-400) para lectura móvil */}
+              <p className="text-zinc-400 text-xs uppercase tracking-widest mt-0.5">{t.j}</p>
+            </div>
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* 6. PACKS DE VENTA - Versión TOP */}
+<section id="packs" className="py-32 px-6 bg-zinc-950 relative overflow-hidden">
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-yellow-500/5 blur-[140px] rounded-full"></div>
+  
+  <h2 className="text-5xl md:text-7xl font-black text-white mb-20 text-center tracking-tighter">
+    Quiero energía sin ansiedad
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto relative z-10">
+    {[
+      { 
+        name: "Plan Esencial",
+        title: "Quiero probarlo", 
+        buttonText: "Pedir 1 unidad",
+        units: "1 Unidad", 
+        old: "$89.000", 
+        price: "$60.000", 
+        tag: "", 
+        color: "border-white/10",
+        envioGratis: false 
+      },
+      { 
+        name: "Plan Bienestar",
+        title: "Lo quiero", 
+        buttonText: "Pedir 2 unidades",
+        units: "2 Unidades", 
+        old: "$178.000", 
+        price: "$120.000", 
+        tag: "El favorito de la comunidad", 
+        color: "border-yellow-400 shadow-[0_0_60px_rgba(234,179,8,0.35)] scale-105 z-20",
+        envioGratis: true 
+      },
+      { 
+        name: "Plan Vitalidad",
+        title: "Quiero las 3 unidades", 
+        buttonText: "Pedir 3 unidades",
+        units: "3 Unidades", 
+        old: "$267.000", 
+        price: "$180.000", 
+        tag: "Mejor inversión", 
+        color: "border-white/10",
+        envioGratis: true 
+      }
+    ].map((p, i) => {
+      const message = `Hola! Quiero el ${p.name} (${p.units}) de FungiPlus 🌱`;
+      const whatsappLink = `https://wa.me/573177013631?text=${encodeURIComponent(message)}`;
+
+      return (
+        <div 
+          key={i} 
+          className={`relative p-12 rounded-[3rem] bg-zinc-900/70 backdrop-blur-md border-2 ${p.color} flex flex-col items-center text-center transition-all hover:scale-[1.06] duration-500`}
+        >
+          {p.tag && (
+            <span className="absolute -top-5 bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-xl">
+              {p.tag}
+            </span>
+          )}
+
+          <h3 className="text-3xl font-black mb-2 text-white">{p.title}</h3>
+          <p className="text-yellow-400 text-2xl font-medium mb-6">{p.name}</p>
+          
+          <p className="text-gray-400 mb-8 italic">{p.units}</p>
+          
+          <p className="text-gray-500 line-through text-lg mb-1">{p.old}</p>
+          <p className="text-5xl font-black text-white mb-7 tracking-tighter">{p.price}</p>
+
+          {p.envioGratis ? (
+            <div className="mb-8">
+              <span className="bg-green-500/20 text-green-400 px-6 py-1.5 rounded-full text-sm font-semibold">
+                🚚 ENVÍO GRATIS
+              </span>
+            </div>
+          ) : (
+            <div className="mb-8 text-gray-500 text-sm">🚚 Envío: +$10.000</div>
+          )}
+
+          <a 
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full mt-auto"
+          >
+            <button className="w-full py-6 rounded-3xl font-bold text-lg bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-black transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+              {p.buttonText}
+            </button>
+          </a>
+        </div>
+      );
+    })}
+  </div>
+
+ {/* Información final */}
+<div className="mt-20 text-center">
+  {/* Subimos la opacidad del fondo a 25%, el borde a 50%, y pasamos el pulse aquí */}
+  <div className="inline-block px-8 py-3 bg-red-950/25 border border-red-700/50 rounded-2xl mb-6 animate-pulse">
+    {/* Dejamos el texto fijo para que sea más fácil de leer mientras el recuadro parpadea sutilmente */}
+    <p className="text-red-400 font-black tracking-[0.2em] uppercase text-sm flex items-center justify-center gap-2">
+      <span>⚠️</span> Pocas unidades disponibles con precio especial
+    </p>
+  </div>
+
+    
+    <p className="text-gray-400 text-lg flex items-center justify-center gap-2">
+      <span>💳</span> Pago por Nequi o Daviplata
+      <span className="mx-2">•</span>
+      <span>📦</span> Envíos a toda Colombia 
+    </p>
+    
+    <p className="text-yellow-500/80 text-sm mt-3">
+      🔥 Medellín y Bogotá: entrega en 24h | Otras ciudades: 3-5 días
+    </p>
+  </div>
+</section>
 
       {/* 7. FOOTER */}
       <footer className="py-20 border-t border-white/5 text-center bg-black">
