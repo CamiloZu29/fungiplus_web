@@ -72,7 +72,7 @@ function App() {
       <div className="flex flex-wrap justify-center lg:justify-start gap-x-10 gap-y-4 text-sm text-gray-400">
         <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Envío gratis desde 2 unidades</div>
         <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Pago contra entrega</div>
-        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> +2.500 clientes satisfechos</div>
+        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Despacho inmediato a todo el país</div>
       </div>
     </div>
 
