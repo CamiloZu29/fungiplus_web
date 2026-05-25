@@ -76,18 +76,17 @@ function App() {
       </div>
     </div>
 
-{/* Imagen Derecha - AQUÍ VA TU IMAGEN */}
-    <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-      <div className="relative">
-        <img 
-          src="/imagenes/Fungiplus3.jpeg"
-          alt="Café FungiPlus con hongos adaptógenos" 
-          className="w-full max-w-[520px] lg:max-w-[560px] drop-shadow-2xl rounded-3xl"
-        />
-        {/* Glow premium */}
-        <div className="absolute -inset-10 bg-yellow-400/10 blur-3xl -z-10 rounded-[4rem]"></div>
-      </div>
-    </div>
+{/* Imagen Derecha - PRUEBA */}
+<div className="flex justify-center lg:justify-end order-1 lg:order-2">
+  <div className="relative">
+    <img 
+      src="/imagenes/Fungiplus3.jpeg" 
+      alt="Café FungiPlus con hongos adaptógenos" 
+      className="w-full max-w-[520px] lg:max-w-[560px] drop-shadow-2xl rounded-3xl"
+    />
+    <div className="absolute -inset-10 bg-yellow-400/10 blur-3xl -z-10 rounded-[4rem]"></div>
+  </div>
+</div>
 </div>
 
   {/* Scroll Indicator Premium Corregido */}
