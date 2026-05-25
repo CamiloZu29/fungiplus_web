@@ -379,12 +379,81 @@ function App() {
   </div>
 </section>
 
-      {/* 7. FOOTER */}
-      <footer className="py-20 border-t border-white/5 text-center bg-black">
-        <h4 className="text-yellow-500 font-bold text-2xl mb-4">FungiPlus</h4>
-        <p className="text-gray-600 text-sm max-w-xs mx-auto mb-8 font-medium">Elevando el potencial humano a través de la micología funcional.</p>
-        <p className="text-gray-800 text-xs font-bold uppercase tracking-widest">© 2026 High Performance Co. All rights reserved.</p>
-      </footer>
+{/* FOOTER PREMIUM */}
+<footer className="bg-black py-20 border-t border-white/10">
+  <div className="max-w-7xl mx-auto px-6">
+    
+    <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+      
+      {/* Logo y Descripción */}
+      <div className="text-center md:text-left">
+        <h3 className="text-4xl font-black text-white tracking-tighter">FungiPlus</h3>
+        <p className="text-gray-500 mt-3 max-w-xs">
+          Café funcional premium con hongos adaptógenos.<br />
+          Energía real sin ansiedad.
+        </p>
+      </div>
+
+      {/* Redes Sociales con SVG */}
+      <div className="flex gap-6">
+        
+        {/* Instagram */}
+        <a 
+          href="https://instagram.com/god_orionn" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="w-12 h-12 flex items-center justify-center bg-zinc-900 hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 text-white rounded-2xl transition-all hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+
+        {/* TikTok */}
+        <a 
+          href="https://tiktok.com/@god.orion8" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group w-12 h-12 flex items-center justify-center bg-zinc-900 hover:bg-black text-white rounded-2xl transition-all hover:scale-110"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 2.895-2.895c.402 0 .79.082 1.143.232V9.3a6.73 6.73 0 0 0-5.134 6.584c0 3.72 3.01 6.73 6.73 6.73 3.72 0 6.73-3.01 6.73-6.73V8.3c1.48.85 3.12 1.32 4.85 1.32v-3.3c-1.3 0-2.52-.4-3.55-1.114z"/>
+          </svg>
+        </a>
+
+        {/* Facebook */}
+        <a 
+          href="https://www.facebook.com/people/God-Orion/100064489494316/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group w-12 h-12 flex items-center justify-center bg-zinc-900 hover:bg-[#1877F2] text-white rounded-2xl transition-all hover:scale-110"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+
+        {/* WhatsApp */}
+        <a 
+          href="https://wa.me/573177013631" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group w-12 h-12 flex items-center justify-center bg-zinc-900 hover:bg-[#25D366] text-white rounded-2xl transition-all hover:scale-110"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.917-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.48 0 1.463 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 2C6.48 2 2 6.59 2 12.25c0 2.85 1.15 5.45 3 7.35L4 22l2.8-1.35c1.85.95 3.95 1.5 6.2 1.5 5.52 0 10-4.59 10-10.25S17.52 2 12 2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div className="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-white/10">
+      © 2026 FungiPlus • Todos los derechos reservados
+    </div>
+  </div>
+</footer>
 
       {/* ENGINE DE ANIMACIONES */}
       <style>{`
