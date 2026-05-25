@@ -80,7 +80,7 @@ function App() {
     <div className="flex justify-center lg:justify-end order-1 lg:order-2">
       <div className="relative">
         <img 
-          src="/imagenes/Fungiplus.jpg"
+          src="/imagenes/Fungiplus3.jpeg"
           alt="Café FungiPlus con hongos adaptógenos" 
           className="w-full max-w-[520px] lg:max-w-[560px] drop-shadow-2xl rounded-3xl"
         />
