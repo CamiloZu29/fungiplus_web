@@ -17,28 +17,27 @@ function App() {
   return (
     <div className="bg-black text-white font-sans overflow-x-hidden min-h-screen">
       
-      {/* 1. NAV - ARREGLADO CON Z-INDEX Y POSICIONAMIENTO CORRECTO */}
-      <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-[100] flex justify-between items-center px-6 py-4 border-b border-white/10">
-        <h1 className="text-yellow-500 font-bold text-2xl tracking-tighter">FungiPlus</h1>
-        <a href="https://wa.me/573177013631" target="_blank" rel="noopener noreferrer">
-          <button className="bg-green-500 hover:bg-green-600 px-6 py-2 rounded-full text-white font-semibold transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
-            Comprar
-          </button>
-        </a>
-      </nav>
+{/* NAV */}
+<nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-[100] flex justify-between items-center px-6 py-4 border-b border-white/10">
+  <h1 className="text-yellow-500 font-bold text-2xl tracking-tighter">FungiPlus</h1>
+  <a href="https://wa.me/573177013631" target="_blank" rel="noopener noreferrer">
+    <button className="bg-green-500 hover:bg-green-600 px-6 py-2 rounded-full text-white font-semibold transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+      Comprar
+    </button>
+  </a>
+</nav>
 
-{/* HERO - VERSIÓN TOP PREMIUM */}
-<section className="min-h-screen flex flex-col justify-between bg-zinc-950 relative overflow-hidden">
+{/* HERO - Versión Final Optimizada y Responsive */}
+<section className="min-h-screen flex items-center bg-zinc-950 relative overflow-hidden pt-20 lg:pt-0">
   {/* Background Glows */}
-  <div className="absolute inset-0 bg-[radial-gradient(at_center,#eab30815_0%,transparent_50%)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(at_center,#eab30815_0%,transparent_60%)]"></div>
   <div className="absolute inset-0 bg-[radial-gradient(at_top_right,#eab30808_0%,transparent_70%)]"></div>
 
-  {/* Contenedor con mi-auto para centrar todo el bloque de texto e imagen verticalmente */}
-  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 py-12 lg:py-0 my-auto w-full">
+  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full py-8 lg:py-0">
     
-    {/* Contenido Izquierdo */}
+    {/* Contenido Texto */}
     <div className="text-center lg:text-left order-2 lg:order-1">
-      <div className="inline-flex items-center gap-3 bg-zinc-900/90 backdrop-blur-md border border-yellow-500/40 px-7 py-3 rounded-3xl text-yellow-400 text-sm font-semibold mb-8">
+      <div className="inline-flex items-center gap-3 bg-zinc-900 border border-yellow-500/30 px-7 py-3 rounded-3xl text-yellow-400 text-sm font-medium mb-8 mx-auto lg:mx-0">
         🍄 PREMIUM FUNCTIONAL COFFEE
       </div>
 
@@ -48,47 +47,48 @@ function App() {
       </h1>
 
       <p className="text-xl md:text-2xl text-gray-400 max-w-lg mx-auto lg:mx-0 mb-10">
-        Café premium instantáneo con <span className="text-white font-medium">Melena De León y Ganoderma</span>. 
+        Café premium instantáneo con <span className="text-white font-medium">Melena de León y Ganoderma</span>.<br />
         Enfoque profundo, energía sostenida y mejor ánimo durante todo el día.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start mb-12">
-        <a 
-          href="https://wa.me/573177013631?text=Hola! Quiero probar FungiPlus 🌱" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <button className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-2xl px-14 py-7 rounded-3xl transition-all duration-300 hover:scale-105 shadow-2xl shadow-yellow-500/40">
+        <a href="https://wa.me/573177013631?text=Hola! Quiero probar FungiPlus 🌱" target="_blank" rel="noopener noreferrer">
+          <button className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-2xl px-14 py-7 rounded-3xl transition-all hover:scale-105 shadow-2xl shadow-yellow-500/30">
             Quiero probarlo ahora
           </button>
         </a>
 
-        <a href="#packs" className="w-full sm:w-auto border-2 border-white/50 hover:border-white text-white font-semibold text-xl px-10 py-7 rounded-3xl transition-all duration-300">
+        <a href="#packs" className="w-full sm:w-auto border-2 border-white/70 hover:border-white text-white font-semibold text-xl px-10 py-7 rounded-3xl transition-all">
           Ver planes y precios
         </a>
       </div>
 
-      {/* Trust */}
-      <div className="flex flex-wrap justify-center lg:justify-start gap-x-10 gap-y-4 text-sm text-gray-400">
-        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Envío gratis desde 2 unidades</div>
-        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Pago contra entrega</div>
-        <div className="flex items-center gap-2"><span className="text-green-400">✔</span> Despacho inmediato a todo el país</div>
+      <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm text-gray-400">
+        <div>✔ Envío gratis desde 2 unidades</div>
+        <div>✔ Pago contra entrega</div>
+        <div>✔ Despacho inmediato a todo el país</div>
       </div>
     </div>
 
-{/* Imagen Derecha */}
-<div className="flex justify-center lg:justify-end order-1 lg:order-2">
-  <div className="relative">
-    <img 
-      src="/imagenes/fungiplusnegro.jpeg" 
-      alt="Café FungiPlus con hongos adaptógenos" 
-      className="w-full max-w-[520px] lg:max-w-[560px] drop-shadow-2xl rounded-3xl"
-    />
-    {/* Glow premium */}
-    <div className="absolute -inset-10 bg-yellow-400/10 blur-3xl -z-10 rounded-[4rem]"></div>
+    {/* Imagen con Glow Dorado Irradiante */}
+    <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+      <div className="relative group">
+        <img 
+          src="/imagenes/fungiplusnegro.jpeg" 
+          alt="Café FungiPlus con hongos adaptógenos" 
+          className="w-full max-w-[520px] lg:max-w-[560px] drop-shadow-2xl rounded-3xl transition-transform duration-700 group-hover:scale-[1.02]"
+        />
+        
+        {/* Glow Dorado Irradiante Premium */}
+        <div className="absolute -inset-12 bg-gradient-to-br from-yellow-400/50 via-amber-400/40 to-transparent blur-3xl -z-10 rounded-[4rem] animate-pulse"></div>
+        <div className="absolute -inset-8 bg-yellow-400/30 blur-2xl -z-10 rounded-[4rem]"></div>
+        <div className="absolute -inset-6 bg-gradient-to-t from-transparent via-yellow-300/20 to-transparent blur-xl -z-10 rounded-[4rem]"></div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
+
+
+
 
   {/* Scroll Indicator Premium Corregido */}
   {/* Cambiado a relative y mt-auto mb-8 para que fluyas debajo del contenido sin pisarlo */}
@@ -265,7 +265,7 @@ function App() {
   </div>
 </section>
 
-{/* 6. PACKS DE VENTA - Versión TOP */}
+{/* 6. PACKS DE VENTA - Versión TOP con 50% de Descuento Parpadeante */}
 <section id="packs" className="py-32 px-6 bg-zinc-950 relative overflow-hidden">
   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-yellow-500/5 blur-[140px] rounded-full"></div>
   
@@ -280,8 +280,10 @@ function App() {
         title: "Quiero probarlo", 
         buttonText: "Pedir 1 unidad",
         units: "1 Unidad", 
-        old: "$89.000", 
+        old: "$120.000", 
         price: "$60.000", 
+        discount: "50% OFF",
+        saving: "Ahorras $60.000",
         tag: "", 
         color: "border-white/10",
         envioGratis: false 
@@ -291,8 +293,10 @@ function App() {
         title: "Lo quiero", 
         buttonText: "Pedir 2 unidades",
         units: "2 Unidades", 
-        old: "$178.000", 
+        old: "$240.000", 
         price: "$120.000", 
+        discount: "50% OFF",
+        saving: "Ahorras $120.000",
         tag: "El favorito de la comunidad", 
         color: "border-yellow-400 shadow-[0_0_60px_rgba(234,179,8,0.35)] scale-105 z-20",
         envioGratis: true 
@@ -302,8 +306,10 @@ function App() {
         title: "Quiero las 3 unidades", 
         buttonText: "Pedir 3 unidades",
         units: "3 Unidades", 
-        old: "$267.000", 
+        old: "$360.000", 
         price: "$180.000", 
+        discount: "50% OFF",
+        saving: "Ahorras $180.000",
         tag: "Mejor inversión", 
         color: "border-white/10",
         envioGratis: true 
@@ -318,18 +324,33 @@ function App() {
           className={`relative p-12 rounded-[3rem] bg-zinc-900/70 backdrop-blur-md border-2 ${p.color} flex flex-col items-center text-center transition-all hover:scale-[1.06] duration-500`}
         >
           {p.tag && (
-            <span className="absolute -top-5 bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-xl">
+            <span className="absolute -top-5 bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-xl z-30">
               {p.tag}
             </span>
           )}
 
-          <h3 className="text-3xl font-black mb-2 text-white">{p.title}</h3>
+          <h3 className="text-3xl font-black mb-2 text-white mt-2">{p.title}</h3>
           <p className="text-yellow-400 text-2xl font-medium mb-6">{p.name}</p>
           
           <p className="text-gray-400 mb-8 italic">{p.units}</p>
           
-          <p className="text-gray-500 line-through text-lg mb-1">{p.old}</p>
-          <p className="text-5xl font-black text-white mb-7 tracking-tighter">{p.price}</p>
+          {/* SECCIÓN DE PRECIOS CON EL BADGE AL LADO DEL PRECIO ANTERIOR Y ANIMATE-PULSE */}
+          <div className="mb-6 flex flex-col items-center">
+            <div className="flex items-center gap-3 mb-1">
+              <p className="text-gray-500 line-through text-lg font-semibold">{p.old}</p>
+              
+              {/* IMPLEMENTACIÓN DEL PARPADEO CON ANIMATE-PULSE */}
+              <span className="bg-red-600 text-white text-xs font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow-[0_0_10px_rgba(220,38,38,0.5)] animate-pulse">
+                {p.discount}
+              </span>
+            </div>
+            
+            <p className="text-5xl font-black text-white tracking-tighter mb-3">{p.price}</p>
+            
+            <p className="text-emerald-400 font-bold text-sm uppercase tracking-wide bg-emerald-500/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1">
+              🎉 {p.saving}
+            </p>
+          </div>
 
           {p.envioGratis ? (
             <div className="mb-8">
@@ -356,17 +377,14 @@ function App() {
     })}
   </div>
 
- {/* Información final */}
-<div className="mt-20 text-center">
-  {/* Subimos la opacidad del fondo a 25%, el borde a 50%, y pasamos el pulse aquí */}
-  <div className="inline-block px-8 py-3 bg-red-950/25 border border-red-700/50 rounded-2xl mb-6 animate-pulse">
-    {/* Dejamos el texto fijo para que sea más fácil de leer mientras el recuadro parpadea sutilmente */}
-    <p className="text-red-400 font-black tracking-[0.2em] uppercase text-sm flex items-center justify-center gap-2">
-      <span>⚠️</span> Pocas unidades disponibles con precio especial
-    </p>
-  </div>
+  {/* Información final */}
+  <div className="mt-20 text-center">
+    <div className="inline-block px-8 py-3 bg-red-950/25 border border-red-700/50 rounded-2xl mb-6 animate-pulse">
+      <p className="text-red-400 font-black tracking-[0.2em] uppercase text-sm flex items-center justify-center gap-2">
+        <span>⚠️</span> Pocas unidades disponibles con precio especial
+      </p>
+    </div>
 
-    
     <p className="text-gray-400 text-lg flex items-center justify-center gap-2">
       <span>💳</span> Pago por Nequi o Daviplata
       <span className="mx-2">•</span>
@@ -382,7 +400,6 @@ function App() {
 {/* FOOTER PREMIUM */}
 <footer className="bg-black py-20 border-t border-white/10">
   <div className="max-w-7xl mx-auto px-6">
-    
     <div className="flex flex-col md:flex-row justify-between items-center gap-12">
       
       {/* Logo y Descripción */}
