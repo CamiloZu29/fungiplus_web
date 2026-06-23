@@ -357,9 +357,12 @@ function App() {
               <span className="bg-green-500/20 text-green-400 px-6 py-1.5 rounded-full text-sm font-semibold">
                 🚚 ENVÍO GRATIS BOGOTA
               </span>
+              <span className="bg-green-500/20 text-green-400 px-6 py-1.5 rounded-full text-sm font-semibold">
+                🚚 NACIONAL $15.000
+              </span>
             </div>
           ) : (
-            <div className="mb-8 text-gray-500 text-sm">🚚 Envío: +$10.000</div>
+            <div className="mb-8 text-gray-500 text-sm">🚚 Envío Bogota: +$10.000</div>
           )}
 
           <a 
