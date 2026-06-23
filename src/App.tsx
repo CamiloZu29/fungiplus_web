@@ -392,7 +392,7 @@ function App() {
     </p>
     
     <p className="text-yellow-500/80 text-sm mt-3">
-      🔥 Medellín y Bogotá: entrega en 24h | Otras ciudades: 3-5 días
+      🔥 Bogotá: Envío GRATIS (24h) | Nacional: $15.000 (2-5 días)
     </p>
   </div>
 </section>
