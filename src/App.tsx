@@ -416,7 +416,7 @@ function App() {
         
         {/* Instagram */}
         <a 
-          href="https://instagram.com/god_orionn" 
+          href="https://instagram.com/fungiplus.co" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-12 h-12 flex items-center justify-center bg-zinc-900 hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 text-white rounded-2xl transition-all hover:scale-110">
@@ -429,7 +429,7 @@ function App() {
 
         {/* TikTok */}
         <a 
-          href="https://tiktok.com/@god.orion8" 
+          href="https://tiktok.com/@fungiplus.co" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group w-12 h-12 flex items-center justify-center bg-zinc-900 hover:bg-black text-white rounded-2xl transition-all hover:scale-110"
