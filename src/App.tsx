@@ -355,7 +355,7 @@ function App() {
           {p.envioGratis ? (
             <div className="mb-8">
               <span className="bg-green-500/20 text-green-400 px-6 py-1.5 rounded-full text-sm font-semibold">
-                🚚 ENVÍO GRATIS
+                🚚 ENVÍO GRATIS BOGOTA
               </span>
             </div>
           ) : (
